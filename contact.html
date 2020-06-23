@@ -1,12 +1,4 @@
-<?php
-if(isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message =  $_POST['message'];
-    mail(floridamultitech@gmail.com,$subject,$message,$name);
-}
-?>
+
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -24,6 +16,7 @@ if(isset($_POST['submit'])) {
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,400,600,900&subset=latin-ext" rel="stylesheet">
     <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script data-cfasync="false" type="text/javascript" src="js/form.js"></script>
   </head>
 
   <body class="size-1140">
@@ -92,7 +85,7 @@ if(isset($_POST['submit'])) {
           <section class="section background-white">
             <div class="s-12 m-12 l-4 center">
               <h4 class="text-size-20 margin-bottom-20 text-dark text-center">Contact Us</h4>
-              <form action="" name="contactForm" class="customform" method="post">
+              <form action="https://script.google.com/macros/s/AKfycbz8VsOAvetwyRAlHW30IuY79MELyjeONN_sZ140cLHR-2T_6G6g/exec" name="contactForm" class="customform" method="post">
                 <div class="s-12">
                   <div class="margin">
                     <div class="s-12 m-12 l-6">
@@ -114,6 +107,12 @@ if(isset($_POST['submit'])) {
                   <p class="message-error form-error">Please enter your message.</p>
                 </div>
                 <div class="s-12"><button class="s-12 submit-form button background-primary text-white" name = "submit" type="submit">Submit Button</button></div>
+
+                      <div style="display:none" >
+                       <!-- You can customize the thankyou message by editing the code below -->
+                       <h2><em>Thanks</em> for contacting us! We will get back to you soon!
+                       </h2>
+                      </div>
               </form>
             </div>
           </section>
@@ -177,5 +176,6 @@ if(isset($_POST['submit'])) {
     <script type="text/javascript" src="js/jquery.events.touch.js"></script>
     <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
     <script type="text/javascript" src="js/template-scripts.js"></script>
+    <script data-cfasync="false" type="text/javascript" src="js/form.js"></script>
   </body>
 </html>
