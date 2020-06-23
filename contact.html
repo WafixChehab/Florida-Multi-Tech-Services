@@ -1,3 +1,12 @@
+<?php
+if(isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message =  $_POST['message'];
+    mail(floridamultitech@gmail.com,$subject,$message,$name);
+}
+?>
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -83,7 +92,7 @@
           <section class="section background-white">
             <div class="s-12 m-12 l-4 center">
               <h4 class="text-size-20 margin-bottom-20 text-dark text-center">Contact Us</h4>
-              <form name="contactForm" class="customform" method="post">
+              <form action="" name="contactForm" class="customform" method="post">
                 <div class="s-12">
                   <div class="margin">
                     <div class="s-12 m-12 l-6">
@@ -104,7 +113,7 @@
                   <textarea name="message" class="required message" placeholder="Your message" rows="3"></textarea>
                   <p class="message-error form-error">Please enter your message.</p>
                 </div>
-                <div class="s-12"><button class="s-12 submit-form button background-primary text-white" type="submit">Submit Button</button></div>
+                <div class="s-12"><button class="s-12 submit-form button background-primary text-white" name = "submit" type="submit">Submit Button</button></div>
               </form>
             </div>
           </section>
